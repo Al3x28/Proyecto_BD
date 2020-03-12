@@ -17,9 +17,9 @@ if (!empty($_POST['Nomb_materia']) && !empty($_POST['Cod_materia']) && !empty($_
     } else {
       $message = 'Error al agregar materia';
     }
-  }else{
-      $message='Por Favor introduzca todos los datos';
-  }
+}else{
+    $message='Por Favor introduzca todos los datos';
+}
 
   
 
@@ -29,28 +29,31 @@ if (!empty($_POST['Nomb_materia']) && !empty($_POST['Cod_materia']) && !empty($_
 <?php  if(!empty($message)): ?>
     <div class="alert alert-dark" role="alert"><?= $message ?></div>
 <?php endif; ?>
-<div class="mt-2">
+ <div class="col-md-4 mx-auto">
         <!--Formulario para registrar materias -->
     <form action="registrar_Materia.php" method="post">
-        <div class="form-group col-md-8" >
-        <div class="row">
-            <div class="col">
+     <div class=" card mt-4 text-center" >
+        <div class="card-header">
+            <h3>Registrar Materia</h3>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
                 <label for="">Nombre de la materia: </label>
                 <input type="text" name="Nomb_materia" id="" placeholder="">
             </div>
-            <div class="col">
+            <div class="form-group">
                 <label for="">Codigo de la materia:</label>
                 <input type="text" name="Cod_materia" id="">
             </div>
-            <div class="col">
+            <div class="form-group">
                 <label for=""> Creditos de la materia:</label>
                 <input type="text" name="Cred" id="">
             </div>
-            <div class="col">
-                <label for="">Codigo del profesor que la imparte</label>
+            <div class="form-group">
+                <label for="">Codigo del profesor que la imparte:</label>
                 <input type="text" name="Cod_P" id="">
             </div>
-            <button type="submit" value="Send" class="btn btn-primary">Registrar Materia</button>
+            <button type="submit" value="Send" class="btn btn-primary">Registrar</button>
         </div>
         </div>
     </form>

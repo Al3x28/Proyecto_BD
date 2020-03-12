@@ -26,19 +26,22 @@ if (!empty($_POST['Nomb_P']) && !empty($_POST['Cod_P'])) {
 <?php endif; ?>
 
     <!--Formulario para registrar profesores-->
-    <div class="mt-2">
+    <div class="col-md-4 mx-auto">
     <form action="registrar_Profesor.php" method="post">
-        <div class="form-group col-md-8" >
-        <div class="row">
-            <div class="col">
+     <div class=" card mt-4 text-center" >
+        <div class="card-header">
+            <h3>Registrar Profesor</h3>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
                 <label for="">Nombre del Profesor: </label>
                 <input type="text" name="Nomb_P" id="" placeholder="">
             </div>
-            <div class="col">
+            <div class="form-group">
                 <label for="">Codigo del Profesor:</label>
                 <input type="text" name="Cod_P" id="">
             </div>
-            <button type="submit" value="Send" class="btn btn-secondary">Registrar Profesor</button>
+            <button type="submit" value="Send" class="btn btn-secondary">Registrar</button>
         </div>
         </div>
     </form>
